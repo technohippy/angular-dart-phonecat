@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+<head>
+  <meta charset="utf-8">
+  <title>Google Phone Gallery</title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body phone-list>
+
+  <div class="row-fluid">
+    <div class="span2">
+      <!--Sidebar content-->
+
+      Search: <input ng-model="ctrl.query" type="text" /><!-- type="text" がないと動かない -->
+    </div>
+    <div class="span10">
+      <!--Body content-->
+      
+      <ul class="phones">
+        <li ng-repeat="phone in ctrl.phones | filter:ctrl.query">
+          {{phone.name}}
+          <p>{{phone.snippet}}</p>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <script type="application/dart" src="controllers.dart"></script>
+  <script type="text/javascript" src="packages/browser/dart.js"></script>
+</body>
+</html>
