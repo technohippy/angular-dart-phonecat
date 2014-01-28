@@ -1,0 +1,7 @@
+name: angular-dart-phonecat
+version: 0.0.1
+environment:
+  sdk: '>=1.0.0'
+dependencies:
+  angular: any
+  browser: any
