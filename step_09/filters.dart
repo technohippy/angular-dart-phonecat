@@ -1,6 +1,4 @@
-library phonecat_filter;
-
-import 'package:angular/angular.dart';
+part of phonecat;
 
 @NgFilter(name: 'checkmark')
 class PhonecatCheckmarkFilter {

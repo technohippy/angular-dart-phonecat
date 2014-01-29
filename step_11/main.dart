@@ -5,9 +5,9 @@ import 'package:angular/routing/module.dart';
 import 'package:di/di.dart';
 import 'package:logging/logging.dart';
 
-import 'controllers.dart';
-import 'filters.dart';
-import 'services.dart';
+part 'controllers.dart';
+part 'filters.dart';
+part 'services.dart';
 
 class PhonecatAppModule extends Module {
   PhonecatAppModule() {

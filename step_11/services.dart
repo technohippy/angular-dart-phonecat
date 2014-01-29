@@ -1,6 +1,4 @@
-library phonecat_service;
-
-import 'package:angular/angular.dart';
+part of phonecat;
 
 class PhonecatService {
   Http _http;

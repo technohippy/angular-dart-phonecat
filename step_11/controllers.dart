@@ -1,7 +1,4 @@
-library phonecat_controller;
-
-import 'package:angular/angular.dart';
-import './services.dart';
+part of phonecat;
 
 @NgController(
   selector: '[phone-list]',
