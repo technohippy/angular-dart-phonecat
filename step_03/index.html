@@ -12,13 +12,13 @@
     <div class="span2">
       <!--Sidebar content-->
 
-      Search: <input ng-model="ctrl.query" type="text" /><!-- type="text" がないと動かない -->
+      Search: <input ng-model="query" type="text" /><!-- type="text" がないと動かない -->
     </div>
     <div class="span10">
       <!--Body content-->
       
       <ul class="phones">
-        <li ng-repeat="phone in ctrl.phones | filter:ctrl.query">
+        <li ng-repeat="phone in ctrl.phones | filter:query">
           {{phone.name}}
           <p>{{phone.snippet}}</p>
         </li>

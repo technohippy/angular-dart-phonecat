@@ -19,7 +19,6 @@ class PhoneListCtrl {
      'snippet': 'The Next, Next Generation tablet.',
      'age': 3}
   ];
-  String query = '';
   String orderProp = 'age';
 }
 

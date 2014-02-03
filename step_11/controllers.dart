@@ -11,7 +11,6 @@ class PhoneListCtrl {
   PhonecatService _phonecatService;
 
   List<Map> phones = [];
-  String query = '';
   String orderProp = 'age';
 
   PhoneListCtrl(PhonecatService this._phonecatService) {

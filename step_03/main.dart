@@ -16,7 +16,6 @@ class PhoneListCtrl {
     {'name': 'MOTOROLA XOOM™',
      'snippet': 'The Next, Next Generation tablet.'},
   ];
-  String query = '';
 }
 
 main() {

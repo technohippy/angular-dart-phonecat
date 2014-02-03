@@ -11,7 +11,6 @@ class PhoneListCtrl {
   Http _http;
 
   List<Map> phones = [];
-  String query = '';
   String orderProp = 'age';
 
   PhoneListCtrl(Http this._http) {
