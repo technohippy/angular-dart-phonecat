@@ -19,8 +19,6 @@ class PhonecatAppModule extends Module {
 
 class PhonecatRouteInitializer implements RouteInitializer {
   init(Router router, ViewFactory view) {
-    // ！！注！！
-    // routeは前から順に比較されるので、下記のaddRouteを入れ替えると動きません
     router.root
     ..addRoute(
         name:'phone-detail', 

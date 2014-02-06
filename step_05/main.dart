@@ -18,7 +18,6 @@ class PhoneListCtrl {
 
   PhoneListCtrl(Http this._http) {
     this._http.get("./phones/phones.json").then((resp) {
-      print(resp.data);
       this.phones = resp.data;
     });
   }
