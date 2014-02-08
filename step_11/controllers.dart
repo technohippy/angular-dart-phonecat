@@ -13,7 +13,7 @@ class PhoneListCtrl {
   List<Map> phones = [];
   String orderProp = 'age';
 
-  PhoneListCtrl(PhonecatService this._phonecatService) {
+  PhoneListCtrl(this._phonecatService) {
     this._phonecatService.query().then(
         (List<Map> phones) {
           this.phones = phones;
@@ -27,7 +27,7 @@ class PhoneListCtrl {
   publishAs: 'ctrl',
   map: const {
     'phone': '=>phone',
-    'mainImageUrl': '@mainImageUrl'
+    'mainImageUrl': '=>mainImageUrl'
   }
 )
 class PhoneDetailCtrl {
@@ -35,7 +35,7 @@ class PhoneDetailCtrl {
   Map phone;
   String mainImageUrl;
 
-  PhoneDetailCtrl(RouteProvider routeProvider, PhonecatService this._phonecatService) {
+  PhoneDetailCtrl(RouteProvider routeProvider, this._phonecatService) {
     String phoneId = routeProvider.parameters['phoneId'];
     _phonecatService.getByPhoneId(phoneId).then(
         (Map phone) {

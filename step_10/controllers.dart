@@ -13,7 +13,7 @@ class PhoneListCtrl {
   List<Map> phones = [];
   String orderProp = 'age';
 
-  PhoneListCtrl(Http this._http) {
+  PhoneListCtrl(this._http) {
     this._http.get("./phones/phones.json").then((resp) {
       this.phones = resp.data;
     });
@@ -25,7 +25,7 @@ class PhoneListCtrl {
   publishAs: 'ctrl',
   map: const {
     'phone': '=>phone',
-    'mainImageUrl': '@mainImageUrl'
+    'mainImageUrl': '=>mainImageUrl'
   }
 )
 class PhoneDetailCtrl {
@@ -33,7 +33,7 @@ class PhoneDetailCtrl {
   Map phone;
   String mainImageUrl;
 
-  PhoneDetailCtrl(RouteProvider routeProvider, Http this._http) {
+  PhoneDetailCtrl(RouteProvider routeProvider, this._http) {
     String phoneId = routeProvider.parameters['phoneId'];
     this._http.get("./phones/$phoneId.json").then((resp) {
       this.phone = resp.data;

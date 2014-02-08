@@ -16,7 +16,7 @@ class PhoneListCtrl {
   List<Map> phones = [];
   String orderProp = 'age';
 
-  PhoneListCtrl(Http this._http) {
+  PhoneListCtrl(this._http) {
     this._http.get("./phones/phones.json").then((resp) {
       print(resp.data);
       this.phones = resp.data;
