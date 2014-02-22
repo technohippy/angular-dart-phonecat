@@ -5,3 +5,5 @@ environment:
 dependencies:
   angular: any
   browser: any
+dev_dependencies:
+  unittest: any
