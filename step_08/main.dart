@@ -11,26 +11,24 @@ class PhonecatAppModule extends Module {
   PhonecatAppModule() {
     type(PhoneListCtrl);
     type(PhoneDetailCtrl);
-    type(RouteInitializer, implementedBy: PhonecatRouteInitializer);
+    value(RouteInitializerFn, phonecatRouteInitializer);
     factory(NgRoutingUsePushState,
         (_) => new NgRoutingUsePushState.value(false));
   }
 }
 
-class PhonecatRouteInitializer implements RouteInitializer {
-  init(Router router, ViewFactory view) {
-    router.root
-    ..addRoute(
-        name:'phone-detail', 
-        path:'/phones/:phoneId', 
-        enter:view('partials/phone-detail.html'))
-    ..addRoute(
-        defaultRoute: true,
-        name:'phone-list', 
-        path:'/phones', 
-        enter:view('partials/phone-list.html'));
-  }
-}
+phonecatRouteInitializer(Router router, ViewFactory views) =>
+    views.configure({
+      'phone-detail': ngRoute(
+          path: '/phones/:phoneId',
+          view: 'partials/phone-detail.html'
+          ),
+      'phone-list': ngRoute(
+          defaultRoute: true,
+          path: '/phones',
+          view: 'partials/phone-list.html'
+          )
+    });
 
 main() {
   Logger.root.level = Level.FINEST;
