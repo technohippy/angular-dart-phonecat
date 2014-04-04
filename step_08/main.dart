@@ -17,7 +17,7 @@ class PhonecatAppModule extends Module {
   }
 }
 
-phonecatRouteInitializer(Router router, ViewFactory views) =>
+phonecatRouteInitializer(Router router, RouteViewFactory views) =>
     views.configure({
       'phone-detail': ngRoute(
           path: '/phones/:phoneId',
